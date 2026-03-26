@@ -1,0 +1,118 @@
+.carousel-outer {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
+
+/* ===== WRAPPER ===== */
+.carousel-component,
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 690px;
+    margin: 0 auto;
+}
+
+/* make sure controls stay at same height as carousel */
+.control {
+    align-self: center;
+}
+
+/* ===== VIEWPORT ===== */
+.window {
+    width: 100%;
+    max-width: 690px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== TRACK ===== */
+.track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* ===== ITEM ===== */
+.item {
+    flex: 0 0 33.333%;
+    padding: 0 1px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.item img {
+    width: 80%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: center;
+}
+
+/* container animation instead of only image */
+.item.active-center {
+    transform: scale(1.08) translateY(-6px);
+    z-index: 2;
+}
+
+/* ===== HEXAGON BUTTONS ===== */
+.arrow-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+}
+
+#prev {
+    left: -80px;
+}
+
+#next {
+    right: -80px;
+}
+
+.control svg {
+    display: block;
+}
+
+.hexagon {
+    fill: transparent;
+    stroke: #ece318;
+    stroke-width: 3;
+    stroke-linejoin: round;
+}
+
+.arrow {
+    fill: #000000;
+    font-size: 28px;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-family: Arial;
+    pointer-events: none;
+    position: absolute;
+}
+
+/* hover */
+.control:hover .hexagon {
+    fill: #ece318;
+    stroke: #ece318;
+}
+
+.control:hover .arrow {
+    fill: #000;
+}
