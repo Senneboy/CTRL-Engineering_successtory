@@ -1,0 +1,157 @@
+/* --- ID CARD --- */
+.id-card {
+    width: 300px;
+    height: default ; /*height is calculated in JS (other file)*/
+    opacity: 0.96;
+    background: #f1cc14;
+    display: flex;
+    overflow: hidden;
+    transition: width 0.35s ease;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    border-bottom: #f0c040 6px solid;
+    border-right: #f0c040 4px solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.id-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    top: 0;
+    position: relative;
+}
+
+.id-card .id-title {
+    display: block;
+    margin: -15px -15px 0 -20px; /* height of box / margin above / margin below / margin left */
+    padding: 15px 20px;
+    width : default; 
+    background-color: #000000;
+    color: #ece318; /* ID title color */
+    font-weight: 700;
+    border-right: 3px solid #2c2c2c; 
+    border-bottom: 3px solid #2c2c2c; 
+    border-radius: 0px;
+}
+
+.id-card b {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    top: 15px;
+    top: 15px;
+    position: absolute;
+
+}
+
+.id-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    top: 15px;
+    position: relative;
+}
+
+
+/* content links */
+.id-content {
+    padding: 15px;
+    padding-left: 20px;
+    flex: 1;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+
+
+.id-content .first{
+    display: block;
+    margin: -15px -15px 15px -20px; /* height of box / margin above / margin below / margin left */
+    padding: 15px 20px;
+    width: calc(100% - 5px - border); /* full width minus right border*/
+    background-color: #fff89a;
+    color: #202020;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    border-top: 2px solid #000000;
+}
+
+.id-content .last{
+    display: block;
+    margin: -15px -15px 15px -20px; /* height of box / margin above / margin below / margin left */
+    padding: 15px 20px;
+    width: calc(100% - 5px - border); /* full width minus right border*/
+    background-color: #fffbc1;
+    color: #202020;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    border-bottom: 2px solid #000000;
+}
+
+/* fff89a / #fef9b5 */
+.id-content .odd{
+    display: block;
+    margin: -15px -15px 15px -20px; /* height of box / margin above / margin below / margin left */
+    padding: 15px 20px;
+    width: calc(100% - 5px - border); /* full width minus right border*/
+    background-color: #fff89a;
+    color: #202020;
+    border: 1px solid #000000;
+    border-radius: 0px;
+}
+.id-content .even{
+    display: block;
+    margin: -15px -15px 15px -20px; /* height of box / margin above / margin below / margin left */
+    padding: 15px 20px;
+    width: calc(100% - 5px - border); /* full width minus right border*/
+    background-color: #fffbc1;
+    color: #202020;
+    border: 1px solid #000000;
+    border-radius: 0px;
+}
+
+
+
+
+
+.toggle-arrow {
+    width: 35px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    rotate: 180deg;
+}
+
+/* hover */
+.toggle-arrow:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* collapsed state */
+.id-card.collapsed {
+    width: 35px;
+}
+
+
+.id-card.collapsed .id-content {
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    /* No invisible box taking up space */
+}
+
+.id-card.collapsed .arrow-icon {
+    transform: rotate(180deg);
+}
