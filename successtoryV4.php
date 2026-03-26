@@ -44,7 +44,7 @@ $id_TimePeriod = "date1-date2";
         .containerNew {
             max-width: 500px;
             /* width white container */
-            margin: -460px auto 0 auto;
+            margin: -590px auto 0 auto;
             /* "50px auto" for space between banner and container  + "0 auto" center container */
             background:
                 <?php echo $container_color; ?>
