@@ -35,6 +35,7 @@ $id_TimePeriod = "date1-date2";
 <head>
     <link rel="stylesheet" href="successtoryCarousel.css">
     <link rel="stylesheet" href="successtoryID_Card.css">
+    <link rel="stylesheet" href="successtoryText.css">
     <meta charset="UTF-8">
     <title>CTRL Engineering</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -124,52 +125,6 @@ $id_TimePeriod = "date1-date2";
             margin: 0;
         }
 
-
-
-
-
-        /* --- TEXT SECTION --- */
-        .text-section {
-            background:
-                <?php echo $container_color; ?>
-            ;
-            padding: 0px 0;
-            /* space between banner and text */
-
-        }
-
-        .text-section>* {
-            max-width: 1200px;
-            margin-left: -70px;
-            /* indent */
-        }
-
-        .text-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 28px;
-        }
-
-        .text-section p {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-
-        }
-
-        /* --- CUSTOM HIGHLIGHT: HEADER --- */
-        .custom-highlight {
-            display: inline;
-            background-color: #ece318;
-            padding: 0 15px;
-
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 750px) {
-            .banner-inner {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
     </style>
 </head>
 
