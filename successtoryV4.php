@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php 
+<?php
 $lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor nunc semper erat mattis, quis facilisis nisl venenatis. Maecenas molestie placerat dignissim. Nam nec molestie ex. Sed quis ligula ultrices, finibus neque venenatis, viverra ex. Aenean quis suscipit diam. Aliquam tincidunt id mauris ut rutrum. Aenean tincidunt magna metus, at auctor tortor rutrum et. Maecenas neque mauris, feugiat non dolor sed, mollis faucibus lectus. Phasellus eget metus nec nibh gravida hendrerit sollicitudin eu eros. Vivamus sollicitudin nisi augue, vitae blandit lorem venenatis eget. Nulla bibendum pretium dolor gravida mattis. Etiam semper risus in tellus accumsan ultrices. Curabitur cursus sapien ut dui lobortis, sit amet dignissim arcu elementum.";
 $title = "Yummy Bakery";
 $description = "Retrofit of a baking plate drive System";
@@ -200,13 +200,13 @@ $id_TimePeriod = "date1-date2";
 
         <div class="id-content">
             <h3 class="id-title"><?php echo $id_title ?></h3>
-            
+
             <p class="first"><b>CUSTOMER</b> <br> <?php echo $id_customer ?> </p>
             <p class="even"><b>INDUSTRY</b> <br> <?php echo $id_industry ?> </p>
             <p class="odd"><b>PRICE RANGE</b> <br> <?php echo $id_priceRange ?> </p>
             <p class="even"><b>COMPETENCE</b> <br> <?php echo $id_competence ?> </p>
             <p class="odd"><b>PROJECT TYPE</b> <br> <?php echo $id_projectType ?> </p>
-            <p class="last"><b>TIME PERIOD</b> <br> <?php echo $id_TimePeriod?> </p>
+            <p class="last"><b>TIME PERIOD</b> <br> <?php echo $id_TimePeriod ?> </p>
 
         </div>
 
@@ -220,7 +220,7 @@ $id_TimePeriod = "date1-date2";
 
         <section class="text-section">
 
-            <h2 class = "custom-highlight"> <b>Long story short</b></h2>
+            <h2 class="custom-highlight"> <b>Long story short</b></h2>
 
             <p> <?php echo $lorem_ipsum; ?> </p>
             <br>
@@ -323,6 +323,7 @@ $id_TimePeriod = "date1-date2";
 
                 /* ==== ID CARD HEIGHT CALCULATOR ==== */
                 function syncIdCardHeight() {
+                    const overlapOffset = -37;
                     const card = document.querySelector('.id-card');
                     if (!card) return;
 
@@ -331,12 +332,18 @@ $id_TimePeriod = "date1-date2";
                     const titleH = title ? title.offsetHeight : 0;
                     const itemsH = items.reduce((sum, item) => sum + item.offsetHeight, 0);
 
-                    // include inside spacing you want (no need if margins are in flow)
-                    card.style.height = titleH + itemsH + 1.3 + 'px';
-                }
-                document.addEventListener('DOMContentLoaded', syncIdCardHeight);
-                window.addEventListener('resize', syncIdCardHeight); // optional
+                    // Add padding from .id-content
+                    const contentPadding = 15 + 20; // top/bottom + left/right from CSS
 
+                    card.style.height = (titleH + itemsH + contentPadding + overlapOffset) + 'px';
+                }
+
+                // Wait for all images to load
+                window.addEventListener('load', syncIdCardHeight);
+                // Recalculate on resize
+                window.addEventListener('resize', syncIdCardHeight);
+                // Also run immediately in case everything is cached
+                syncIdCardHeight();
             </script>
 
         </body>
