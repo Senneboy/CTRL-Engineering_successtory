@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php
+<?php 
 $lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor nunc semper erat mattis, quis facilisis nisl venenatis. Maecenas molestie placerat dignissim. Nam nec molestie ex. Sed quis ligula ultrices, finibus neque venenatis, viverra ex. Aenean quis suscipit diam. Aliquam tincidunt id mauris ut rutrum. Aenean tincidunt magna metus, at auctor tortor rutrum et. Maecenas neque mauris, feugiat non dolor sed, mollis faucibus lectus. Phasellus eget metus nec nibh gravida hendrerit sollicitudin eu eros. Vivamus sollicitudin nisi augue, vitae blandit lorem venenatis eget. Nulla bibendum pretium dolor gravida mattis. Etiam semper risus in tellus accumsan ultrices. Curabitur cursus sapien ut dui lobortis, sit amet dignissim arcu elementum.";
 $title = "Yummy Bakery";
 $description = "Retrofit of a baking plate drive System";
@@ -9,7 +9,7 @@ $bg_color = "#040404";
 $bg_image = "hexagon3.png";
 $container_color = "#ffffff";
 
-/* carousel <images> */
+// carousel <images> */
 $img_1 = "image1.jpg";
 $img_2 = "image2.jpg";
 $img_3 = "image3.jpg";
@@ -19,11 +19,11 @@ $img_6 = "image6.jpg";
 $img_7 = "image7.jpg";
 $img_8 = "image8.png";
 
-/* ID CARD CONTENT */
+// ID CARD CONTENT 
 $id_title = "ID CARD";
 $id_customer = "Yummy Bakery";
 $id_industry = "FOOD AND BEVERAGE";
-$id_priceRange = "€€";
+$id_priceRange = "€xxx - €xxx";
 $id_competence = "Competence";
 $id_projectType = "Project Type";
 $id_TimePeriod = "date1-date2";
@@ -200,6 +200,7 @@ $id_TimePeriod = "date1-date2";
 
         <div class="id-content">
             <h3 class="id-title"><?php echo $id_title ?></h3>
+            
             <p class="first"><b>CUSTOMER</b> <br> <?php echo $id_customer ?> </p>
             <p class="even"><b>INDUSTRY</b> <br> <?php echo $id_industry ?> </p>
             <p class="odd"><b>PRICE RANGE</b> <br> <?php echo $id_priceRange ?> </p>

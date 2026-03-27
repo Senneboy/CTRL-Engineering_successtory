@@ -5,11 +5,11 @@
     opacity: 0.96;
     background: #f1cc14;
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     transition: width 0.35s ease;
     position: sticky;
     top: 0px;
-    z-index: 100;
+    z-index: 5;
     border-bottom: #f0c040 6px solid;
     border-right: #f0c040 4px solid;
     border-top-right-radius: 5px;
@@ -23,6 +23,7 @@
     margin: 0;
     top: 0;
     position: relative;
+    text-align: center;
 }
 
 .id-card .id-title {
@@ -36,7 +37,61 @@
     border-right: 3px solid #2c2c2c; 
     border-bottom: 3px solid #2c2c2c; 
     border-radius: 0px;
+    position: relative;
+    z-index: 2;
 }
+
+
+
+.id-card .id-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 180px; /* adjust to control the size  */
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(
+        25% 40%,           /* top left */
+        75% 40%,           /* top right */
+        85% 50%,         /* right corner */
+        75% 60%,         /* bottom right */
+        25% 60%,         /* bottom left */
+        15% 50%            /* left corner */
+    );
+    
+    background: #ece318; /* ID title hexagon colour*/
+
+    
+    z-index: -2;
+    pointer-events: none;
+}
+
+
+.id-card .id-title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 180px; /* adjust to control the size  */
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(
+        25% 42%,           /* top left */
+        75% 42%,           /* top right */
+        83% 50%,         /* right corner */
+        75% 58%,         /* bottom right */
+        25% 58%,         /* bottom left */
+        17% 50%            /* left corner */
+    );
+    
+    background: #000000;
+
+    
+    z-index: -1;
+    pointer-events: none;
+}
+
 
 .id-card b {
     font-family: 'Montserrat', sans-serif;
@@ -51,7 +106,6 @@
 .id-card p {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    padding: 10px 5px;
     margin-bottom: 15px;
     top: 15px;
     position: relative;
