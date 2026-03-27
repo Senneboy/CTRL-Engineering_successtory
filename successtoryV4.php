@@ -211,7 +211,7 @@ $id_TimePeriod = "date1-date2";
         </div>
 
         <div class="toggle-arrow" id="toggleBtn">
-            <span class="arrow-icon">›</span>
+            <span class="arrow arrow-icon">›</span>
         </div>
 
     </div>
@@ -245,7 +245,7 @@ $id_TimePeriod = "date1-date2";
                         </div>
                     </div>
 
-                    <!-- ARROWS LAYER -->
+                    <!-- ARROWS LAYER CAROUSEL -->
                     <div class="arrow-layer">
 
                         <div class="control" id="prev">

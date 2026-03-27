@@ -5,7 +5,7 @@
     opacity: 0.96;
     background: #f1cc14;
     display: flex;
-    overflow: visible;
+    overflow: hidden;
     transition: width 0.35s ease;
     position: sticky;
     top: 0px;
