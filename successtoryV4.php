@@ -62,6 +62,18 @@ $id_TimePeriod = "date1-date2";
             overflow: visible;
         }
 
+        @media (min-width: 2000px) {
+            .container {
+            max-width: 50%;
+            margin: -590px auto 0 auto;
+            background:<?php echo $container_color; ?>;
+            min-height: 200vh;
+            padding: 200px;
+            overflow: visible;
+            }
+        }
+
+
         h1 {
             margin-top: 0;
         }
@@ -291,6 +303,8 @@ $id_TimePeriod = "date1-date2";
             };
             /* ==== ID CARD HEIGHT CALCULATOR ==== */
             function syncIdCardHeight() {
+                const arrow = document.getElementById("toggleBtn");
+console.log(arrow.offsetWidth, arrow.offsetHeight, getComputedStyle(arrow).display, getComputedStyle(arrow).visibility, getComputedStyle(arrow).opacity);
                 const overlapOffset = -36;
                 const card = document.querySelector('.id-card');
                 if (!card) return;
