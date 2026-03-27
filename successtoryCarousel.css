@@ -52,13 +52,10 @@
     border-radius: 0;
     transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     transform-origin: center;
+    border-radius: 5px;
 }
 
-/* container animation instead of only image */
-.item.active-center {
-    transform: scale(1.08) translateY(-6px);
-    z-index: 2;
-}
+
 
 /* ===== HEXAGON BUTTONS ===== */
 .arrow-layer {

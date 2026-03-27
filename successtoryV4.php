@@ -261,10 +261,10 @@ $id_TimePeriod = "date1-date2";
             const items = document.querySelectorAll(".item");
             const total = items.length;
             function update() {
-                items.forEach(i => i.classList.remove("active-center"));
+
                 let center = index + 1;
                 if (center >= total) center = 0;
-                items[center].classList.add("active-center");
+
                 const offset = -(index * (100)); /* 100% per image | FOR MORE IMAGES CHANGE HERE*/
                 track.style.transform = `translateX(${offset}%)`;
             }
