@@ -3,19 +3,6 @@ root {
 }
 
 
-/* ---TEXT CONTAINER --- */
-.containerNew {
-    max-width: 500px;
-    /* width white container */
-    margin: -590px auto 0 auto;
-    /* "50px auto" for space between banner and container  + "0 auto" center container */
-    background:var(--container_color);
-    min-height: 200vh;
-    /* hight of container = height of page */
-    padding: 200px;
-    overflow: visible;
-}
-
 
 /* --- TEXT SECTION --- */
 .text-section {
@@ -51,3 +38,24 @@ root {
     }
 }
 
+/* --- QUOTE --- */
+.quote {
+    display: block;
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: center;
+    white-space: normal;
+
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+
+
+    font-weight: 100;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.quote .author {
+    font-style: italic;
+}
