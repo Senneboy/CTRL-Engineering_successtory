@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <?php
-$lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor nunc semper erat mattis, quis facilisis nisl venenatis. Maecenas molestie placerat dignissim. Nam nec molestie ex. Sed quis ligula ultrices, finibus neque venenatis, viverra ex. Aenean quis suscipit diam. Aliquam tincidunt id mauris ut rutrum. Aenean tincidunt magna metus, at auctor tortor rutrum et. Maecenas neque mauris, feugiat non dolor sed, mollis faucibus lectus. Phasellus eget metus nec nibh gravida hendrerit sollicitudin eu eros. Vivamus sollicitudin nisi augue, vitae blandit lorem venenatis eget. Nulla bibendum pretium dolor gravida mattis. Etiam semper risus in tellus accumsan ultrices. Curabitur cursus sapien ut dui lobortis, sit amet dignissim arcu elementum.";
-$quote = "Quote about something special";
-$quoteAuthor = "Author Name";
+$longStoryShort = "At Yummy Bakery, a baking plate forms a critical part of the production process. After many years of continuous operation, wear in the bearing system of the baking plate drive began to compromise mechanical stability. This created risks for product consistency and production continuity. <br> CTRL Engineering was responsible for the mechanical design, drive system dimensioning, and on-site integration, restoring the installation through a targeted and cost-effective retrofit.";
+$challenge  = "The baking plate had been operating reliably for many years, but progressive bearing wear introduced mechanical play and vibrations in the drive system. This reduced the stability of the baking process and increased the risk of unplanned downtime. <br> <br> Although only specific mechanical components were worn, the impact on production quality and reliability was significant. A full machine replacement would have been costly and disproportionate to the actual technical problem.";
+$solution =  "CTRL Engineering executed a complete retrofit of the baking plate drive system. The mechanical design was tailored to the existing structure, with new bearings and mounting interfaces to reduce vibrations and ensure long-term durability. The drive system was carefully sized, with motor, gearbox, and coupling selected to meet the required torque and speed profiles while providing sufficient safety margins for reliable operation. <br> The new drive system was installed, calibrated, and tested on-site, fully integrated with the existing machine software, allowing the conveyor plate to operate smoothly without major modifications to the original setup.";
+$whyIt_matters = "If you only upgrade the parts that affect performance, you can get more use out of your machines while keeping control of your spending and time offline. This approach makes sure your production line keeps working reliably, protects product quality, and delivers a clear return on investment.";
+$result = "Following the retrofit, the baking plate operates smoothly and consistently, restoring product stability and reducing the risk of unexpected production stops. By upgrading only the critical mechanical components, Yummy Bakery significantly extended the service life of the existing installation. <br> <br> This approach delivered a strong return on investment compared to full machine replacement, while securing reliable production for the long term.";
+$quote = "A targeted retrofit allowed us to restore reliability and extend the lifetime of the baking plate without replacing the entire line.";
+$quoteAuthor = "Anthony van Dael – Build and integration at CTRL engineering";
 $title = "Yummy Bakery";
 $description = "Retrofit of a baking plate drive System";
 $industry = "FOOD AND BEVERAGE";
@@ -179,7 +183,7 @@ $id_TimePeriod = "date1-date2";
 
             <h2 class="custom-highlight"> <b>Long story short</b></h2>
 
-            <p> <?php echo $lorem_ipsum; ?> </p>
+            <p> <?php echo $longStoryShort ?>  </p>
             <br>
         </section>
 
@@ -222,14 +226,34 @@ $id_TimePeriod = "date1-date2";
             </div>
         </div>
 
-
+        <!-- QUOTE -->
         <blockquote class="quote">
             <p>
-                "<?php echo $quote; ?>"
-            </p> 
-            <p class = "author">- <?php echo $quoteAuthor; ?></p>
+                “<?php echo $quote; ?>”
+            </p>
+            <p class="author">- <?php echo $quoteAuthor; ?></p>
         </blockquote>
+        
+        
+        <!-- FLEXBOX TXT & IMAGE -->
+        <section class="text-section">
+            <h2 class = "custom-highlight">Why it matters to you?</h2>
+            <div class="flex-container">
+                <div class="text">
+                    <p>
+                        <?php echo $whyIt_matters; ?>
+                    </p>
+                </div>
 
+                <div class="image">
+                    <img src="image6.jpg" alt="image">
+                </div>
+            </div>
+        </section>
+
+ 
+        
+        
         <!-- JavaScript Carousel-->
         <script>
             let index = 0;
@@ -241,12 +265,12 @@ $id_TimePeriod = "date1-date2";
                 let center = index + 1;
                 if (center >= total) center = 0;
                 items[center].classList.add("active-center");
-                const offset = -(index * (100 / 3));
+                const offset = -(index * (100)); /* 100% per image | FOR MORE IMAGES CHANGE HERE*/
                 track.style.transform = `translateX(${offset}%)`;
             }
             function next() {
                 index++;
-                if (index > total - 3) index = 0;
+                if (index > total - 1) index = 0; /* total - 1 => 1 image per | FOR MORE IMAGES CHANGE HERE*/
                 update();
             }
             function prev() {

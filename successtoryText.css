@@ -1,19 +1,18 @@
 root {
---container_color: "#ffffff"
+--container_color: #ffffff;
 }
 
 
 
 /* --- TEXT SECTION --- */
 .text-section {
-    background:
-        var(--container_color);
+    background: var(--container_color);
     padding: 0px 0;
     /* space between banner and text */
 }
 .text-section>* {
-    max-width: 1200px;
-    margin-left: -70px;
+    width: 150%;
+    margin-left: -160px;
     /* indent */
 }
 .text-section h2 {
@@ -38,6 +37,44 @@ root {
     }
 }
 
+/* --- FLEXBOX LAYOUT --- */
+.flex-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  gap: 40px; /* space between text and image */
+}
+
+.text {
+  flex: 1; 
+}
+
+.image {
+  flex: 1.4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 5px 5px 10px #353535;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+    justify-content: center;
+  }
+}
+
+
 /* --- QUOTE --- */
 .quote {
     display: block;
@@ -46,8 +83,8 @@ root {
     text-align: center;
     white-space: normal;
 
-    overflow-wrap: break-word !important;
-    word-break: normal !important;
+    overflow-wrap: break-word;
+    word-break: normal;
 
 
     font-weight: 100;
