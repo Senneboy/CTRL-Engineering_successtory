@@ -39,15 +39,15 @@
 
 /* ===== ITEM ===== */
 .item {
-    flex: 0 0 33.333%;
+    flex: 0 0 100%; /* each item takes x% width of viewport */
     padding: 0 1px;
     box-sizing: border-box;
     transition: transform 0.3s ease;
 }
 
 .item img {
-    width: 80%;
-    height: 240px;
+    width: 90%;
+    height: 400px; /*height of carousel*/
     object-fit: cover;
     border-radius: 0;
     transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
