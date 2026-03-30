@@ -19,6 +19,12 @@ root {
     font-family: 'Montserrat', sans-serif;
     font-size: 28px;
 }
+.text-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    padding-left: 10px;
+    box-decoration-break: clone; /* same padding for each line */
+}
 .text-section p {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -45,12 +51,13 @@ root {
     }
 }
 
-/* --- FLEXBOX LAYOUT --- */
-.flex-container {
+/* --- FLEXBOX IMAGE --- */
+.flex-container-img {
   display: flex;
   align-items: center; 
   justify-content: space-between;
   gap: 40px; /* space between text and image */
+  padding-bottom: 100px;
 }
 
 .text {
@@ -71,9 +78,33 @@ root {
   box-shadow: 5px 5px 10px #353535;
 }
 
+/* --- TWO COLUMN FLEXBOX --- */
+.flex-container-column-txt {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.col-left {
+  flex: 1;
+  padding-right: 40px;
+  border-right: 1px solid #b3b3b3;
+}
+
+.col-right {
+  flex: 1;
+  padding-left: 40px;
+  border-left: 1px solid #b3b3b3;
+}
+
+.col-left p, .col-right p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
-  .flex-container {
+  .flex-container-img {
     display: block;
     text-align: center;
     width: 60vw;
@@ -81,6 +112,22 @@ root {
 
   .image {
     justify-content: center;
+  }
+
+  .flex-container-column-txt {
+    display: block;
+  }
+
+  .col-left {
+    padding-right: 0;
+    padding-bottom: 20px;
+    border-right: none;
+    border-bottom: 1px solid #b3b3b3;
+  }
+
+  .col-right {
+    padding-left: 0;
+    padding-top: 20px;
   }
 }
 

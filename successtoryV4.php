@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <?php
 $longStoryShort = "At Yummy Bakery, a baking plate forms a critical part of the production process. After many years of continuous operation, wear in the bearing system of the baking plate drive began to compromise mechanical stability. This created risks for product consistency and production continuity. <br> CTRL Engineering was responsible for the mechanical design, drive system dimensioning, and on-site integration, restoring the installation through a targeted and cost-effective retrofit.";
-$challenge  = "The baking plate had been operating reliably for many years, but progressive bearing wear introduced mechanical play and vibrations in the drive system. This reduced the stability of the baking process and increased the risk of unplanned downtime. <br> <br> Although only specific mechanical components were worn, the impact on production quality and reliability was significant. A full machine replacement would have been costly and disproportionate to the actual technical problem.";
-$solution =  "CTRL Engineering executed a complete retrofit of the baking plate drive system. The mechanical design was tailored to the existing structure, with new bearings and mounting interfaces to reduce vibrations and ensure long-term durability. The drive system was carefully sized, with motor, gearbox, and coupling selected to meet the required torque and speed profiles while providing sufficient safety margins for reliable operation. <br> The new drive system was installed, calibrated, and tested on-site, fully integrated with the existing machine software, allowing the conveyor plate to operate smoothly without major modifications to the original setup.";
+$solution = "CTRL Engineering executed a complete retrofit of the baking plate drive system. The mechanical design was tailored to the existing structure, with new bearings and mounting interfaces to reduce vibrations and ensure long-term durability. The drive system was carefully sized, with motor, gearbox, and coupling selected to meet the required torque and speed profiles while providing sufficient safety margins for reliable operation. <br> The new drive system was installed, calibrated, and tested on-site, fully integrated with the existing machine software, allowing the conveyor plate to operate smoothly without major modifications to the original setup.";
 $whyIt_matters = "If you only upgrade the parts that affect performance, you can get more use out of your machines while keeping control of your spending and time offline. This approach makes sure your production line keeps working reliably, protects product quality, and delivers a clear return on investment.";
 $result = "Following the retrofit, the baking plate operates smoothly and consistently, restoring product stability and reducing the risk of unexpected production stops. By upgrading only the critical mechanical components, Yummy Bakery significantly extended the service life of the existing installation. <br> <br> This approach delivered a strong return on investment compared to full machine replacement, while securing reliable production for the long term.";
 $quote = "A targeted retrofit allowed us to restore reliability and extend the lifetime of the baking plate without replacing the entire line.";
@@ -15,7 +14,12 @@ $bg_color = "#040404";
 $bg_image = "hexagon7.png"; // hexagon3.png for dark bg
 $container_color = "#ececec"; // #fff for dark bg
 
-// carousel <images> */
+//Text and titles
+$challenge_title = "Worn-out bearings threaten production continuity";
+$challenge = "The baking plate had been operating reliably for many years, but progressive bearing wear introduced mechanical play and vibrations in the drive system. This reduced the stability of the baking process and increased the risk of unplanned downtime. <br> <br> Although only specific mechanical components were worn, the impact on production quality and reliability was significant. A full machine replacement would have been costly and disproportionate to the actual technical problem.";
+$solution_title = "Targeted retrofit of the drive system";
+
+// carousel <images> 
 $img_1 = "image1.jpg";
 $img_2 = "image2.jpg";
 $img_3 = "image3.jpg";
@@ -64,12 +68,14 @@ $id_TimePeriod = "date1-date2";
 
         @media (min-width: 2000px) {
             .container {
-            max-width: 50%;
-            margin: -590px auto 0 auto;
-            background:<?php echo $container_color; ?>;
-            min-height: 200vh;
-            padding: 200px;
-            overflow: visible;
+                max-width: 50%;
+                margin: -590px auto 0 auto;
+                background:
+                    <?php echo $container_color; ?>
+                ;
+                min-height: 200vh;
+                padding: 200px;
+                overflow: visible;
             }
         }
 
@@ -83,6 +89,7 @@ $id_TimePeriod = "date1-date2";
             font-family: Arial, sans-serif;
             /* background: <//?php echo $bg_color; ?//>; /* Background next to white container */
             background-image: url('<?php echo $bg_image; ?>');
+            overflow-x: hidden;
         }
 
         /* --- BANNER --- */
@@ -197,7 +204,7 @@ $id_TimePeriod = "date1-date2";
 
             <h2 class="custom-highlight"> <b>Long story short</b></h2>
 
-            <p> <?php echo $longStoryShort ?>  </p>
+            <p> <?php echo $longStoryShort ?> </p>
             <br>
         </section>
 
@@ -247,12 +254,12 @@ $id_TimePeriod = "date1-date2";
             </p>
             <p class="author">- <?php echo $quoteAuthor; ?></p>
         </blockquote>
-        
-        
-        <!-- FLEXBOX TXT & IMAGE -->
+
+
+        <!-- FLEX CONT TXT & IMAGE -->
         <section class="text-section">
-            <h2 class = "custom-highlight">Why it matters to you?</h2>
-            <div class="flex-container">
+            <h2 class="custom-highlight">Why it matters to you?</h2>
+            <div class="flex-container-img">
                 <div class="text">
                     <p>
                         <?php echo $whyIt_matters; ?>
@@ -265,8 +272,40 @@ $id_TimePeriod = "date1-date2";
             </div>
         </section>
 
- 
-        
+        <!-- FLEX CONT TXT & TXT -->
+        <section class="text-section">
+            <div class="flex-container-column-txt">
+                <div class="col-left">
+                    <h2 class="custom-highlight">
+                        The Challenge: 
+                    </h2>
+                    <br>
+                    <h3 class="custom-highlight">
+                        <?php echo $challenge_title; ?> 
+                    </h3>
+                    <br>
+                    <p>
+                        <?php echo $challenge; ?>
+                    </p>
+                    
+                </div>
+
+                <div class="col-right">
+                    <h2 class="custom-highlight">
+                        The Solution: 
+                    </h2>
+                    <br>
+                    <h3 class="custom-highlight">
+                        <?php echo $solution_title; ?> 
+                    </h3>
+                    <br>
+                    <p>
+                        <?php echo $solution; ?>
+                    </p>
+                </div>
+            </div>
+        </section>
+
         
         <!-- JavaScript Carousel-->
         <script>
@@ -305,13 +344,14 @@ $id_TimePeriod = "date1-date2";
             };
             /* ==== ID CARD HEIGHT CALCULATOR ==== */
             btn.onclick = () => {
-    idCard.classList.toggle("collapsed");
-    if (idCard.classList.contains("collapsed")) {
-        btn.style.marginLeft = "-265px";
-    } else {
-        btn.style.marginLeft = "0px";
-    }
-};
+            idCard.classList.toggle("collapsed");
+            if (idCard.classList.contains("collapsed")) {
+                btn.style.marginLeft = "-265px";
+            } 
+            else {
+                btn.style.marginLeft = "0px";
+            }
+            };
             function syncIdCardHeight() {
                 const arrow = document.getElementById("toggleBtn");
                 console.log(arrow.offsetWidth, arrow.offsetHeight, getComputedStyle(arrow).display, getComputedStyle(arrow).visibility, getComputedStyle(arrow).opacity);
