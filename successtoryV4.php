@@ -12,8 +12,8 @@ $description = "Retrofit of a baking plate drive System";
 $industry = "FOOD AND BEVERAGE";
 $banner_image = "banner.jpg";
 $bg_color = "#040404";
-$bg_image = "hexagon7.png";
-$container_color = "#f7f7f7";
+$bg_image = "hexagon7.png"; // hexagon3.png for dark bg
+$container_color = "#ececec"; // #fff for dark bg
 
 // carousel <images> */
 $img_1 = "image1.jpg";
@@ -184,7 +184,8 @@ $id_TimePeriod = "date1-date2";
         </div>
 
         <div class="toggle-arrow" id="toggleBtn">
-            <span class="arrow arrow-icon">›</span>
+            <span class="arrow arrow-icon">‹</span>
+            <span class="arrow-text">ID CARD</span>
         </div>
 
     </div>
@@ -305,7 +306,7 @@ $id_TimePeriod = "date1-date2";
             /* ==== ID CARD HEIGHT CALCULATOR ==== */
             function syncIdCardHeight() {
                 const arrow = document.getElementById("toggleBtn");
-console.log(arrow.offsetWidth, arrow.offsetHeight, getComputedStyle(arrow).display, getComputedStyle(arrow).visibility, getComputedStyle(arrow).opacity);
+                console.log(arrow.offsetWidth, arrow.offsetHeight, getComputedStyle(arrow).display, getComputedStyle(arrow).visibility, getComputedStyle(arrow).opacity);
                 const overlapOffset = -36;
                 const card = document.querySelector('.id-card');
                 if (!card) return;

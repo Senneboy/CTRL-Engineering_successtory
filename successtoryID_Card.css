@@ -180,8 +180,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 2px solid rgba(0, 0, 0, 0.2);
-    rotate: 180deg;
+}
+
+.arrow-icon {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: #000;
+    transform: none;
+    transform-origin: center;
+    white-space: nowrap;
+}
+
+.arrow-text {
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #000;
+    transform: rotate(90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    letter-spacing: 1.2em;
 }
 
 /* hover */
@@ -207,5 +227,9 @@
 }
 
 .id-card.collapsed .arrow-icon {
-    transform: rotate(180deg);
+    display: none;
+}
+
+.id-card.collapsed .arrow-text {
+    display: block;
 }
