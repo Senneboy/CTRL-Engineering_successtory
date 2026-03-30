@@ -2,16 +2,16 @@
 .id-card {
     width: 300px;
     height: default ; /*height is calculated in JS (other file)*/
-    opacity: 0.96;
-    background: #f1cc14;
+    opacity: 0.93;
+    background: #ece318;
     display: flex;
     overflow: hidden;
     transition: width 0.35s ease;
     position: sticky;
     top: 0px;
     z-index: 5;
-    border-bottom: #f0c040 6px solid;
-    border-right: #f0c040 4px solid;
+    border-bottom: #dfd51c 6px solid;
+    border-right: #dfd51c 4px solid;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }

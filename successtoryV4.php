@@ -12,8 +12,8 @@ $description = "Retrofit of a baking plate drive System";
 $industry = "FOOD AND BEVERAGE";
 $banner_image = "banner.jpg";
 $bg_color = "#040404";
-$bg_image = "hexagon3.png";
-$container_color = "#ffffff";
+$bg_image = "hexagon7.png";
+$container_color = "#f7f7f7";
 
 // carousel <images> */
 $img_1 = "image1.jpg";
