@@ -30,6 +30,14 @@ root {
     padding: 0 15px;
 }
 /* --- RESPONSIVE --- */
+
+@media (max-width: 900px) {
+    .text-section > * {
+        width: 80vw;
+        margin-left: calc(-50vw + 85%);
+    }
+}
+
 @media (max-width: 750px) {
     .banner-inner {
         flex-direction: column;
@@ -63,11 +71,12 @@ root {
   box-shadow: 5px 5px 10px #353535;
 }
 
+/* --- RESPONSIVE --- */
 @media (max-width: 900px) {
   .flex-container {
     display: block;
     text-align: center;
-    max-width: 90%;
+    width: 60vw;
   }
 
   .image {
@@ -96,4 +105,13 @@ root {
 
 .quote .author {
     font-style: italic;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .quote {
+    text-align: center;
+    width: 80vw;
+    margin-left: calc(-50vw + 85%);
+  }
 }

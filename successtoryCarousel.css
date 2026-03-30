@@ -114,3 +114,27 @@
 .control:hover .arrow {
     fill: #000;
 }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    #prev {
+        left: 10px;
+    }
+    #next {
+        right: 10px;
+    }
+    .item img {
+        padding-left: 0.5%;
+        position: center;
+        width: 80vw;
+        max-height: auto;
+    }
+    .hexagon {
+        fill: #ece118d0;
+        stroke: #ece318;
+    }
+    .control:hover .hexagon {
+        fill: #ece318;
+        stroke: #ece318;
+    }
+}

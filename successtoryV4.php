@@ -87,6 +87,7 @@ $id_TimePeriod = "date1-date2";
 
         /* --- BANNER --- */
         .banner {
+            width: 100vw;
             position: relative;
             background-image: url('<?php echo $banner_image; ?>');
             background-size: cover;
