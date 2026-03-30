@@ -88,8 +88,9 @@ root {
 /* --- QUOTE --- */
 .quote {
     display: block;
-    max-width: 800px;
-    margin: 80px auto;
+    width: 150%;
+    max-width: none;
+    margin: 80px auto 80px -160px;
     text-align: center;
     white-space: normal;
 
