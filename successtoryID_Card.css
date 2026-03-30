@@ -207,7 +207,7 @@
     transform: rotate(90deg);
     transform-origin: center;
     white-space: nowrap;
-    letter-spacing: 1.2em;
+    letter-spacing: 0.6em;
 }
 
 /* hover */
