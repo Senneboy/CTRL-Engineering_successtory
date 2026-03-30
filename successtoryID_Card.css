@@ -5,7 +5,7 @@
     opacity: 0.93;
     background: #ece318;
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     transition: width 0.35s ease;
     position: sticky;
     top: 0px;
@@ -120,6 +120,8 @@
     opacity: 1;
     transform: translateX(0);
     transition: opacity 0.2s ease, transform 0.3s ease;
+
+    min-width: 235px;
 }
 
 
@@ -180,11 +182,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: margin-left 0.35s ease;
 }
+
 
 .arrow-icon {
     font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 900;
     color: #000;
     transform: none;
@@ -233,3 +237,4 @@
 .id-card.collapsed .arrow-text {
     display: block;
 }
+

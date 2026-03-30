@@ -304,6 +304,14 @@ $id_TimePeriod = "date1-date2";
                 card.classList.toggle("collapsed");
             };
             /* ==== ID CARD HEIGHT CALCULATOR ==== */
+            btn.onclick = () => {
+    idCard.classList.toggle("collapsed");
+    if (idCard.classList.contains("collapsed")) {
+        btn.style.marginLeft = "-265px";
+    } else {
+        btn.style.marginLeft = "0px";
+    }
+};
             function syncIdCardHeight() {
                 const arrow = document.getElementById("toggleBtn");
                 console.log(arrow.offsetWidth, arrow.offsetHeight, getComputedStyle(arrow).display, getComputedStyle(arrow).visibility, getComputedStyle(arrow).opacity);
