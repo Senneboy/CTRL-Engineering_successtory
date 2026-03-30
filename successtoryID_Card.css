@@ -201,8 +201,8 @@
 .arrow-text {
     display: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 19px;
+    font-weight: 1000;
     color: #000;
     transform: rotate(90deg);
     transform-origin: center;
@@ -217,7 +217,7 @@
 
 /* collapsed state */
 .id-card.collapsed {
-    width: 35px;
+    width: 55px;
 }
 
 
