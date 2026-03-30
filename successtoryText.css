@@ -116,6 +116,7 @@ root {
 
   .flex-container-column-txt {
     display: block;
+    text-align: center;
   }
 
   .col-left {
@@ -126,6 +127,7 @@ root {
   }
 
   .col-right {
+    border-left: none;
     padding-left: 0;
     padding-top: 20px;
   }
