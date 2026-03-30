@@ -19,7 +19,6 @@ $challenge_title = "Worn-out bearings threaten production continuity";
 $challenge = "The baking plate had been operating reliably for many years, but progressive bearing wear introduced mechanical play and vibrations in the drive system. This reduced the stability of the baking process and increased the risk of unplanned downtime. <br> <br> Although only specific mechanical components were worn, the impact on production quality and reliability was significant. A full machine replacement would have been costly and disproportionate to the actual technical problem.";
 
 $solution_title = "Targeted retrofit of the drive system";
-
 $solution = "CTRL Engineering executed a complete retrofit of the baking plate drive system. The mechanical design was tailored to the existing structure, with new bearings and mounting interfaces to reduce vibrations and ensure long-term durability. The drive system was carefully sized, with motor, gearbox, and coupling selected to meet the required torque and speed profiles while providing sufficient safety margins for reliable operation. <br> The new drive system was installed, calibrated, and tested on-site, fully integrated with the existing machine software, allowing the conveyor plate to operate smoothly without major modifications to the original setup.";
 
 $quote = "A targeted retrofit allowed us to restore reliability and extend the lifetime of the baking plate without replacing the entire line.";
@@ -255,17 +254,9 @@ $id_TimePeriod = "date1-date2";
             </div>
         </div>
 
-        <!-- QUOTE -->
-        <blockquote class="quote">
-            <p>
-                “<?php echo $quote; ?>”
-            </p>
-            <p class="author">- <?php echo $quoteAuthor; ?></p>
-        </blockquote>
-
-
         <!-- FLEX CONT TXT & IMAGE -->
         <section class="text-section">
+            <br>
             <h2 class="custom-highlight">Why it matters to you?</h2>
             <div class="flex-container-img">
                 <div class="text">
@@ -314,7 +305,16 @@ $id_TimePeriod = "date1-date2";
             </div>
         </section>
 
-        
+        <!-- QUOTE -->
+        <blockquote class="quote">
+            <p>
+                “<?php echo $quote; ?>”
+            </p>
+            <p class="author">- <?php echo $quoteAuthor; ?></p>
+        </blockquote>
+
+
+
         <!-- JavaScript Carousel-->
         <script>
             let index = 0;

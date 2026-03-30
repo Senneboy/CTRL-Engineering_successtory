@@ -51,7 +51,7 @@ root {
     }
 }
 
-/* --- FLEXBOX IMAGE --- */
+/* --- FLEXBOX TEXT & IMAGE --- */
 .flex-container-img {
   display: flex;
   align-items: center; 
@@ -78,7 +78,7 @@ root {
   box-shadow: 5px 5px 10px #353535;
 }
 
-/* --- TWO COLUMN FLEXBOX --- */
+/* --- FLEXBOX TEXT & TEXT --- */
 .flex-container-column-txt {
   display: flex;
   align-items: stretch;
@@ -151,6 +151,8 @@ root {
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
     color: #333;
+
+    border: #b3b3b3 solid 1px;
 }
 
 .quote .author {
