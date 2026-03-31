@@ -51,9 +51,9 @@ $id_TimePeriod = "date1-date2";
 <html lang="nl">
 
 <head>
-    <link rel="stylesheet" href="successtoryCarousel.css">
-    <link rel="stylesheet" href="successtoryID_Card.css">
-    <link rel="stylesheet" href="successtoryText.css">
+    <link rel="stylesheet" href="singleCase_Carousel.css">
+    <link rel="stylesheet" href="singleCase_IDCard.css">
+    <link rel="stylesheet" href="singleCase_Text.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTRL Engineering</title>

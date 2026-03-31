@@ -1,0 +1,252 @@
+/* --- COLORS --- */
+$id-card-yellow: #ece318;
+$id-card-yellow-border: #dfd51c;
+$id-card-dark: #000000;
+$id-card-dark-border: #2c2c2c;
+$id-card-odd-bg: #fff89a;
+$id-card-even-bg: #fffbc1;
+$id-card-text: #202020;
+
+/* --- ID CARD --- */
+.id-card {
+    width: 300px;
+    height: auto; /* height is calculated in JS (other file) */
+    opacity: 0.93;
+    background: $id-card-yellow;
+    display: flex;
+    overflow: hidden;
+    transition: width 0.35s ease;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    border-bottom: $id-card-yellow-border 6px solid;
+    border-right: $id-card-yellow-border 4px solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 18px;
+        margin: 0;
+        top: 0;
+        position: relative;
+        text-align: center;
+    }
+
+    .id-title {
+        display: block;
+        margin: -15px -15px 0 -20px; /* height of box / margin above / margin below / margin left */
+        padding: 15px 20px;
+        width: auto;
+        background-color: $id-card-dark;
+        color: $id-card-yellow; /* ID title color */
+        font-weight: 700;
+        border-right: 3px solid $id-card-dark-border;
+        border-bottom: 3px solid $id-card-dark-border;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+
+        /* hexagon outline title */
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 180px; /* adjust to control the size */
+            aspect-ratio: 1 / cos(30deg);
+            clip-path: polygon(
+                25% 40%,
+                75% 40%,
+                82% 50%,
+                75% 60%,
+                25% 60%,
+                17% 50%
+            );
+            background: $id-card-yellow; /* ID title hexagon colour */
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* creates the black hexagon ==> you see the outline of the bigger one */
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 180px; /* adjust to control the size */
+            aspect-ratio: 1 / cos(30deg);
+            clip-path: polygon(
+                25% 42%,
+                75% 42%,
+                80% 50%,
+                75% 58%,
+                25% 58%,
+                19% 50%
+            );
+            background: $id-card-dark;
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+
+    b {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        margin: 0;
+        top: 15px;
+        position: absolute;
+    }
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        margin-bottom: 15px;
+        top: 15px;
+        position: relative;
+    }
+
+    /* content links */
+    .id-content {
+        padding: 15px 15px 15px 20px;
+        flex: 1;
+        opacity: 1;
+        transform: translateX(0);
+        min-width: 235px;
+
+        .first,
+        .last,
+        .odd,
+        .even {
+            display: block;
+            margin: -15px -15px 15px -20px; /* height of box / margin above / margin below / margin left */
+            padding: 15px 20px;
+            width: calc(100% - 5px); /* full width minus right border */
+            color: $id-card-text;
+            border: 1px solid $id-card-dark;
+            border-radius: 0;
+        }
+
+        .first {
+            background-color: $id-card-odd-bg;
+            border-top: 2px solid $id-card-dark;
+        }
+
+        .last {
+            background-color: $id-card-even-bg;
+            border-bottom: 2px solid $id-card-dark;
+        }
+
+        .odd {
+            background-color: $id-card-odd-bg;
+        }
+
+        .even {
+            background-color: $id-card-even-bg;
+        }
+    }
+
+    .toggle-arrow {
+        width: 35px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: margin-left 0.35s ease;
+        background: $id-card-yellow;
+        z-index: 10;
+        position: relative;
+
+        /* hover */
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .arrow-icon {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: 900;
+        color: #000;
+        transform: none;
+        transform-origin: center;
+        white-space: nowrap;
+    }
+
+    .arrow-text {
+        display: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 19px;
+        font-weight: 1000;
+        color: #000;
+        transform: rotate(90deg);
+        transform-origin: center;
+        white-space: nowrap;
+        letter-spacing: 0.6em;
+    }
+
+    /* collapsed state */
+    &.collapsed {
+        width: 55px;
+
+        .id-content {
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0s 0.35s; /* hide content after 0.35s */
+        }
+
+        .arrow-icon {
+            display: none;
+        }
+
+        .arrow-text {
+            display: block;
+        }
+    }
+}
+
+/* --- PHONE SIZE --- */
+@media (max-width: 600px) {
+    .id-card {
+        width: min(380px, calc(100vw - 8px));
+        max-width: calc(100vw - 8px);
+
+        &.collapsed {
+            width: 38px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        b {
+            font-size: 17px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .id-content {
+            min-width: 0;
+            padding: 18px 18px 18px 24px;
+        }
+
+        .toggle-arrow {
+            width: 40px;
+        }
+
+        .arrow-icon {
+            font-size: 34px;
+        }
+
+        .arrow-text {
+            font-size: 20px;
+            letter-spacing: 0.45em;
+        }
+    }
+}
+

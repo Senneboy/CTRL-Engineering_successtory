@@ -1,3 +1,9 @@
+$accent-yellow: #ece318;
+$accent-yellow-mobile: #ece118d0;
+$arrow-color: #000000;
+$carousel-max-width: 690px;
+$carousel-height: 400px;
+
 .carousel-outer {
     position: relative;
     width: 100vw;
@@ -12,19 +18,38 @@
 .wrapper {
     position: relative;
     width: 100%;
-    max-width: 690px;
+    max-width: $carousel-max-width;
     margin: 0 auto;
 }
 
 /* make sure controls stay at same height as carousel */
 .control {
     align-self: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+
+    svg {
+        display: block;
+    }
+
+    &:hover {
+        .hexagon {
+            fill: $accent-yellow;
+            stroke: $accent-yellow;
+        }
+
+        .arrow {
+            fill: #000;
+        }
+    }
 }
 
 /* ===== VIEWPORT ===== */
 .window {
     width: 100%;
-    max-width: 690px;
+    max-width: $carousel-max-width;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -43,19 +68,16 @@
     padding: 0 1px;
     box-sizing: border-box;
     transition: transform 0.3s ease;
+
+    img {
+        width: 90%;
+        height: $carousel-height; /* height of carousel */
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        transform-origin: center;
+        border-radius: 5px;
+    }
 }
-
-.item img {
-    width: 90%;
-    height: 400px; /*height of carousel*/
-    object-fit: cover;
-    border-radius: 0;
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    transform-origin: center;
-    border-radius: 5px;
-}
-
-
 
 /* ===== HEXAGON BUTTONS ===== */
 .arrow-layer {
@@ -68,13 +90,6 @@
     pointer-events: none;
 }
 
-.control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: auto;
-}
-
 #prev {
     left: -80px;
 }
@@ -83,19 +98,15 @@
     right: -80px;
 }
 
-.control svg {
-    display: block;
-}
-
 .hexagon {
     fill: transparent;
-    stroke: #ece318;
+    stroke: $accent-yellow;
     stroke-width: 3;
     stroke-linejoin: round;
 }
 
 .arrow {
-    fill: #000000;
+    fill: $arrow-color;
     font-size: 28px;
     font-weight: bold;
     text-anchor: middle;
@@ -105,21 +116,12 @@
     position: absolute;
 }
 
-/* hover */
-.control:hover .hexagon {
-    fill: #ece318;
-    stroke: #ece318;
-}
-
-.control:hover .arrow {
-    fill: #000;
-}
-
 /* Responsive adjustments */
 @media (max-width: 800px) {
     #prev {
         left: 10px;
     }
+
     #next {
         right: 10px;
     }
@@ -133,24 +135,25 @@
     .item {
         display: flex;
         justify-content: center;
-    }
 
-    .item img {
-        display: block;
-        margin: 0 auto;
-        padding-left: 0;
-        width: 80vw;
-        max-height: 40vh;
-        height: auto;
-        max-width: 100%;
+        img {
+            display: block;
+            margin: 0 auto;
+            padding-left: 0;
+            width: 80vw;
+            max-height: 40vh;
+            height: auto;
+            max-width: 100%;
+        }
     }
 
     .hexagon {
-        fill: #ece118d0;
-        stroke: #ece318;
+        fill: $accent-yellow-mobile;
+        stroke: $accent-yellow;
     }
+
     .control:hover .hexagon {
-        fill: #ece318;
-        stroke: #ece318;
+        fill: $accent-yellow;
+        stroke: $accent-yellow;
     }
 }
