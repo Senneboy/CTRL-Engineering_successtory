@@ -116,19 +116,35 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     #prev {
         left: 10px;
     }
     #next {
         right: 10px;
     }
-    .item img {
-        padding-left: 0.5%;
-        position: center;
-        width: 80vw;
-        max-height: auto;
+
+    .wrapper,
+    .window {
+        width: 100%;
+        max-width: 100%;
     }
+
+    .item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item img {
+        display: block;
+        margin: 0 auto;
+        padding-left: 0;
+        width: 80vw;
+        max-height: 40vh;
+        height: auto;
+        max-width: 100%;
+    }
+
     .hexagon {
         fill: #ece118d0;
         stroke: #ece318;

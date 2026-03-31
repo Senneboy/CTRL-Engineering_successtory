@@ -86,6 +86,22 @@ $id_TimePeriod = "date1-date2";
             }
         }
 
+        @media (max-width: 900px) {
+            body {
+                background-image: none;
+                background-color: <?php echo $container_color; ?>;
+            }
+
+            .container {
+                width: 100vw;
+                max-width: 100vw;
+                margin: -500px 0 0 0;
+                padding: 120px 25px 40px;
+                min-height: auto;
+                box-sizing: border-box;
+            }
+        }
+
 
         h1 {
             margin-top: 0;
@@ -259,13 +275,13 @@ $id_TimePeriod = "date1-date2";
             <br>
             <h2 class="custom-highlight">Why it matters to you?</h2>
             <div class="flex-container-img">
-                <div class="text">
+                <div class="textFlex">
                     <p>
                         <?php echo $whyIt_matters; ?>
                     </p>
                 </div>
 
-                <div class="image">
+                <div class="imageFlex">
                     <img src="image6.jpg" alt="image">
                 </div>
             </div>
@@ -313,14 +329,27 @@ $id_TimePeriod = "date1-date2";
             <p class="author">- <?php echo $quoteAuthor; ?></p>
         </blockquote>
 
+        <section class="text-section">
+
+            <h2 class="custom-highlight"> <b>Result</b></h2>
+
+            <p> <?php echo $result ?> </p>
+            <br>
+        </section>
+        <div class="image"><img src="<?php echo $img_7; ?>"></div>
+
+
 
 
         <!-- JavaScript Carousel-->
         <script>
+            /* ==== CAROUSEL VARIABLES ==== */
             let index = 0;
             const track = document.querySelector(".track");
             const items = document.querySelectorAll(".item");
             const total = items.length;
+
+            /* ==== UPDATE CAROUSEL POSITION ==== */
             function update() {
 
                 let center = index + 1;
@@ -329,16 +358,22 @@ $id_TimePeriod = "date1-date2";
                 const offset = -(index * (100)); /* 100% per image | FOR MORE IMAGES CHANGE HERE*/
                 track.style.transform = `translateX(${offset}%)`;
             }
+
+            /* ==== NEXT IMAGE ==== */
             function next() {
                 index++;
                 if (index > total - 1) index = 0; /* total - 1 => 1 image per | FOR MORE IMAGES CHANGE HERE*/
                 update();
             }
+
+            /* ==== PREVIOUS IMAGE ==== */
             function prev() {
                 index--;
                 if (index < 0) index = total - 3;
                 update();
             }
+
+            /* ==== CAROUSEL BUTTONS ==== */
             document.getElementById("next").onclick = next;
             document.getElementById("prev").onclick = prev;
             /* ==== AUTO PLAY PER 1 IMAGE ==== */
@@ -347,19 +382,34 @@ $id_TimePeriod = "date1-date2";
             /* ==== JavaScript ID CARD ==== */
             const btn = document.getElementById("toggleBtn");
             const card = document.getElementById("idCard");
+
+            /* ==== UPDATE TOGGLE POSITION ==== */
+            function updateIdCardToggle() {
+                if (card.classList.contains("collapsed")) {
+                    btn.style.marginLeft = "-265px";
+                } else {
+                    btn.style.marginLeft = "0px";
+                }
+            }
+
+            /* ==== TOGGLE ID CARD ==== */
             btn.onclick = () => {
                 card.classList.toggle("collapsed");
+                updateIdCardToggle();
             };
-            /* ==== ID CARD HEIGHT CALCULATOR ==== */
-            btn.onclick = () => {
-            idCard.classList.toggle("collapsed");
-            if (idCard.classList.contains("collapsed")) {
-                btn.style.marginLeft = "-265px";
-            } 
-            else {
-                btn.style.marginLeft = "0px";
+
+            /* ==== RESPONSIVE ID CARD STATE ==== */
+            function syncIdCardResponsiveState() {
+                if (window.innerWidth < 900) { /* Collapse ID Card on smaller screens to prevent blocking content */
+                    card.classList.add("collapsed");
+                } 
+                if (window.innerWidth >= 1380) { /*Uncollapse when ID Card doesn't block any content */
+                    card.classList.remove("collapsed");
+                }
+                updateIdCardToggle();
             }
-            };
+
+            /* ==== ID CARD HEIGHT CALCULATOR ==== */
             function syncIdCardHeight() {
                 const arrow = document.getElementById("toggleBtn");
                 console.log(arrow.offsetWidth, arrow.offsetHeight, getComputedStyle(arrow).display, getComputedStyle(arrow).visibility, getComputedStyle(arrow).opacity);
@@ -375,11 +425,20 @@ $id_TimePeriod = "date1-date2";
                 card.style.height = (titleH + itemsH + contentPadding + overlapOffset) + 'px';
             }
             // Wait for all images to load
-            window.addEventListener('load', syncIdCardHeight);
+            window.addEventListener('load', () => {
+                syncIdCardResponsiveState();
+                syncIdCardHeight();
+            });
             // Recalculate on resize
-            window.addEventListener('resize', syncIdCardHeight);
+            window.addEventListener('resize', () => {
+                syncIdCardResponsiveState();
+                syncIdCardHeight();
+            });
             // Also run immediately in case everything is cached
+            syncIdCardResponsiveState();
             syncIdCardHeight();
+
+
         </script>
 
 
