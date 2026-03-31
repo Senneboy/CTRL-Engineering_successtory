@@ -54,6 +54,7 @@ $id_TimePeriod = "date1-date2";
     <link rel="stylesheet" href="successtoryID_Card.css">
     <link rel="stylesheet" href="successtoryText.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTRL Engineering</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
@@ -101,6 +102,13 @@ $id_TimePeriod = "date1-date2";
                 box-sizing: border-box;
             }
         }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            .container {
+                margin: -550px auto 0 auto;
+            }
+}
 
 
         h1 {
@@ -386,7 +394,9 @@ $id_TimePeriod = "date1-date2";
             /* ==== UPDATE TOGGLE POSITION ==== */
             function updateIdCardToggle() {
                 if (card.classList.contains("collapsed")) {
-                    btn.style.marginLeft = "-265px";
+                    const content = card.querySelector(".id-content");
+                    const hiddenWidth = content ? content.offsetWidth : 265;
+                    btn.style.marginLeft = `-${hiddenWidth}px`;
                 } else {
                     btn.style.marginLeft = "0px";
                 }
@@ -402,8 +412,8 @@ $id_TimePeriod = "date1-date2";
             function syncIdCardResponsiveState() {
                 if (window.innerWidth < 900) { /* Collapse ID Card on smaller screens to prevent blocking content */
                     card.classList.add("collapsed");
-                } 
-                if (window.innerWidth >= 1380) { /*Uncollapse when ID Card doesn't block any content */
+                }
+                if (window.innerWidth >= 1380) { /* Uncollapse when ID Card doesn't block any content */
                     card.classList.remove("collapsed");
                 }
                 updateIdCardToggle();

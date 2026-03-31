@@ -236,3 +236,45 @@
     display: block;
 }
 
+/* --- PHONE SIZE --- */
+@media (max-width: 600px) {
+    .id-card {
+        width: min(380px, calc(100vw - 8px));
+        max-width: calc(100vw - 8px);
+    }
+
+    .id-card.collapsed {
+        width: 38px;
+    }
+
+    .toggle-arrow {
+        width: 40px;
+    }
+
+    .id-content {
+        min-width: 0;
+        padding: 18px 18px 18px 24px;
+    }
+
+    .id-card h3 {
+        font-size: 20px;
+    }
+
+    .id-card b {
+        font-size: 17px;
+    }
+
+    .id-card p {
+        font-size: 16px;
+    }
+
+    .arrow-icon {
+        font-size: 34px;
+    }
+
+    .arrow-text {
+        font-size: 20px;
+        letter-spacing: 0.45em;
+    }
+}
+
