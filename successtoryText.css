@@ -171,7 +171,7 @@
 
   .video-section iframe,
   .image img {
-    height: auto;
+    height: min(52vw, 420px);
   }
 
   .flex-container-column-txt {
