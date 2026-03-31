@@ -140,8 +140,8 @@ Below are the main languages and tools used in this project:
 - `PHP` – used to build the page **structure** and store **variables**, such as titles, text, image paths, and video links.
 - `HTML` – used to **structure** the content of the page.
 - `CSS` – used to **style** the page:layout, colours, spacing, and responsiveness.
-- `SCSS` – used as a more organized version of CSS with a cleaner structure.
-- `JavaScript` – used for functionality of buttons, and responsive collapsing of the ID.
-- `XAMPP` – used as a local Apache server to run and view the PHP file in the browser.
+- `SCSS` – used as a more **organized version of CSS** with a cleaner structure.
+- `JavaScript` – used for functionality of **buttons**, and responsive collapsing of the ID.
+- `XAMPP` – used as a local Apache server to **run and view the PHP file** in the browser.
 
 ---
