@@ -154,11 +154,3 @@
         stroke: #ece318;
     }
 }
-
-@media (min-width: 1380px) {
-    .carousel-outer {
-        width: 100%;
-        left: 0;
-        transform: none;
-    }
-}
