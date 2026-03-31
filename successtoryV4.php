@@ -35,7 +35,7 @@ $img_5 = "image5.jpg";
 $img_6 = "image6.jpg";
 $img_7 = "image7.jpg";
 $img_8 = "image8.png";
-$video_file = "video.mp4";
+$video_embed = "https://player.vimeo.com/video/1122666935"; //Link example for video
 
 // ID CARD CONTENT 
 $id_title = "ID CARD";
@@ -332,10 +332,12 @@ $id_TimePeriod = "date1-date2";
 
         <!-- VIDEO -->
         <div class="video-section">
-            <video controls playsinline preload="metadata">
-                <source src="<?php echo $video_file; ?>" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe
+                src="<?php echo $video_embed; ?>"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
 
         <!-- QUOTE -->

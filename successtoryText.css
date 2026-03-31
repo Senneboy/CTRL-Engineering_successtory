@@ -130,7 +130,7 @@
     margin: 40px 0 80px;
 }
 
-.video-section video,
+.video-section iframe,
 .image img {
     display: block;
     width: 100%;
@@ -155,7 +155,7 @@
   .imageFlex,
   .video-section,
   .image,
-  .video-section video,
+  .video-section iframe,
   .image img {
     width: 100%;
     max-width: 100%;
@@ -169,7 +169,7 @@
     margin: 0 auto 40px;
   }
 
-  .video-section video,
+  .video-section iframe,
   .image img {
     height: auto;
   }
