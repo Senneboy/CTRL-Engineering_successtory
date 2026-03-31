@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 
-//Colors and images
+//Colors and background images
 $banner_image = "banner.jpg";
 $bg_color = "#040404";
 $bg_image = "hexagon7.png"; // hexagon3.png for dark bg
@@ -26,7 +26,7 @@ $quoteAuthor = "Anthony van Dael – Build and integration at CTRL engineering";
 
 $result = "Following the retrofit, the baking plate operates smoothly and consistently, restoring product stability and reducing the risk of unexpected production stops. By upgrading only the critical mechanical components, Yummy Bakery significantly extended the service life of the existing installation. <br> <br> This approach delivered a strong return on investment compared to full machine replacement, while securing reliable production for the long term.";
 
-// carousel <images> 
+// images and video 
 $img_1 = "image1.jpg";
 $img_2 = "image2.jpg";
 $img_3 = "image3.jpg";
@@ -35,6 +35,7 @@ $img_5 = "image5.jpg";
 $img_6 = "image6.jpg";
 $img_7 = "image7.jpg";
 $img_8 = "image8.png";
+$video_file = "video.mp4";
 
 // ID CARD CONTENT 
 $id_title = "ID CARD";
@@ -328,6 +329,14 @@ $id_TimePeriod = "date1-date2";
                 </div>
             </div>
         </section>
+
+        <!-- VIDEO -->
+        <div class="video-section">
+            <video controls playsinline preload="metadata">
+                <source src="<?php echo $video_file; ?>" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
         <!-- QUOTE -->
         <blockquote class="quote">
