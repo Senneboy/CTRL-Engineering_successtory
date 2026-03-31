@@ -35,7 +35,7 @@ $img_5 = "image5.jpg";
 $img_6 = "image6.jpg";
 $img_7 = "image7.jpg";
 $img_8 = "image8.png";
-$video_embed = "https://player.vimeo.com/video/1122666935"; //Link example for video
+$video_embed = "https://player.vimeo.com/video/1122666935"; //Link example for video embed, leave empty if no video is needed.
 
 // ID CARD CONTENT 
 $id_title = "ID CARD";
@@ -330,6 +330,7 @@ $id_TimePeriod = "date1-date2";
             </div>
         </section>
 
+        <?php if (!empty($video_embed)): ?> <!-- Only show video section if a video link is provided -->
         <!-- VIDEO -->
         <div class="video-section">
             <iframe
@@ -339,6 +340,7 @@ $id_TimePeriod = "date1-date2";
                 allowfullscreen>
             </iframe>
         </div>
+        <?php endif; ?>
 
         <!-- QUOTE -->
         <blockquote class="quote">
