@@ -1,12 +1,5 @@
-:root {
-  --container_color: #ececec;
-}
-
-
-
 /* --- TEXT SECTION --- */
 .text-section {
-    background: var(--container_color);
     width: 150%;
     position: relative;
     left: -160px;
