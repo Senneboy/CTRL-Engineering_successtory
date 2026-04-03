@@ -11,7 +11,7 @@ $title = "Yummy Bakery";
 $industry = "FOOD AND BEVERAGE";
 $description = "Retrofit of a baking plate drive System";
 
-$longStoryShort = "At Yummy Bakery, a baking plate forms a critical part of the production process. After many years of continuous operation, wear in the bearing system of the baking plate drive began to compromise mechanical stability. This created risks for product consistency and production continuity. <br> CTRL Engineering was responsible for the mechanical design, drive system dimensioning, and on-site integration, restoring the installation through a targeted and cost-effective retrofit.";
+$longStoryShort = "At Yummy Bakery, a baking plate forms a critical part of the production process. After many years of continuous operation, wear in the bearing system of the baking plate drive began to compromise mechanical stability. This created risks for product consistency and production continuity. <br> <br> CTRL Engineering was responsible for the mechanical design, drive system dimensioning, and on-site integration, restoring the installation through a targeted and cost-effective retrofit.";
 $whyIt_matters = "If you only upgrade the parts that affect performance, you can get more use out of your machines while keeping control of your spending and time offline. This approach makes sure your production line keeps working reliably, protects product quality, and delivers a clear return on investment.";
 
 $challenge_title = "Worn-out bearings threaten production continuity";
