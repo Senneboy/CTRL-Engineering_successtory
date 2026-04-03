@@ -73,15 +73,15 @@ $id_TimePeriod = "date1-date2";
             font-family: Arial, sans-serif;
             background-color: <?php echo $bg_color; ?>;
             background-image:
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.3' stroke-width='58'/%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.95' stroke-width='30'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.22' stroke-width='54'/%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.88' stroke-width='28'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.26' stroke-width='56'/%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.9' stroke-width='29'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.2' stroke-width='52'/%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.8' stroke-width='26'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.24' stroke-width='55'/%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.86' stroke-width='28'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.23' stroke-width='54'/%3E%3Cpolygon points='220,140 860,140 1080,520 860,900 220,900 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.84' stroke-width='27'/%3E%3C/svg%3E");
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.3' stroke-width='58'/%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.95' stroke-width='30'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.22' stroke-width='54'/%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.88' stroke-width='28'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.26' stroke-width='56'/%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.9' stroke-width='29'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.2' stroke-width='52'/%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.8' stroke-width='26'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.24' stroke-width='55'/%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.86' stroke-width='28'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1040'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ff9f1a' stroke-opacity='0.23' stroke-width='54'/%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.84' stroke-width='27'/%3E%3C/svg%3E");
             background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
             background-size: 620px 540px, 700px 610px, 560px 490px, 760px 660px, 640px 560px, 660px 580px;
-            background-position: -260px 8%, 108% 26%, -190px 76%, 51% 112%, 106% 84%, -300px 45%;
+            background-position: -260px 8%, 108% 26%, -190px 94%, 51% 130%, 106% 102%, -300px 58%;
             overflow-x: hidden;
         }
 
@@ -319,7 +319,7 @@ $id_TimePeriod = "date1-date2";
         <?php endif; ?>
 
         <!-- QUOTE -->
-        <div class="content-block">
+        <div class="content-block" id = "quote">
         <blockquote class="quote">
             <p>
                 “<?php echo $quote; ?>”
