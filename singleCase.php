@@ -59,51 +59,9 @@ $id_TimePeriod = "date1-date2";
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ---TEXT CONTAINER --- */
-        .container {
-            max-width: 500px;
-            /* width white container */
-            margin: -590px auto 0 auto;
-            /* "50px auto" for space between banner and container  + "0 auto" center container */
-            background:
-                <?php echo $container_color; ?>
-            ;
-            min-height: 200vh;
-            /* hight of container = height of page */
-            padding: 200px;
-            overflow: visible;
+        :root {
+            --container-color: <?php echo $container_color; ?>;
         }
-
-        @media (min-width: 2000px) {
-            .container {
-                max-width: 50%;
-                margin: -590px auto 0 auto;
-                background:
-                    <?php echo $container_color; ?>
-                ;
-                min-height: 200vh;
-                padding: 200px;
-                overflow: visible;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .container {
-                width: 100vw;
-                max-width: 100vw;
-                margin: -500px 0 0 0;
-                padding: 120px 25px 40px;
-                min-height: auto;
-                box-sizing: border-box;
-            }
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 600px) {
-            .container {
-                margin: -550px auto 0 auto;
-            }
-}
 
 
         h1 {
@@ -137,9 +95,12 @@ $id_TimePeriod = "date1-date2";
             min-height: 500px;
             display: flex;
             clip-path: polygon(39% 100%, 0 100%, 0 0, 100% 0, 100% 15%, 100% 100%, 61% 100%, 60% 95%, 40% 95%);
+            z-index: 10;
         }
 
         .banner-wrap {
+            position: relative;
+            z-index: 6;
             filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.55));
         }
 
@@ -232,7 +193,9 @@ $id_TimePeriod = "date1-date2";
 
     </div>
     <!-- CONTENT -->
-    <div class="container">
+    <section class="content-stack">
+
+        <div class="content-block">
 
         <!-- Long story short -->
         <section class="text-section">
@@ -281,8 +244,10 @@ $id_TimePeriod = "date1-date2";
                 </div>
             </div>
         </div>
+        </div>
 
         <!-- FLEX CONT TXT & IMAGE -->
+        <div class="content-block">
         <section class="text-section">
             <br>
             <h2 class="custom-highlight">Why it matters to you?</h2>
@@ -298,10 +263,12 @@ $id_TimePeriod = "date1-date2";
                 </div>
             </div>
         </section>
+        </div>
 
         <!-- FLEX CONT TXT & TXT -->
+        <div class="content-block-row">
+        <div class="content-block">
         <section class="text-section">
-            <div class="flex-container-column-txt">
                 <div class="col-left">
                     <h2 class="custom-highlight">
                         The Challenge: 
@@ -314,9 +281,12 @@ $id_TimePeriod = "date1-date2";
                     <p>
                         <?php echo $challenge; ?>
                     </p>
-                    
                 </div>
+        </section>
+        </div>
 
+        <div class="content-block">
+        <section class="text-section">
                 <div class="col-right">
                     <h2 class="custom-highlight">
                         The Solution: 
@@ -330,11 +300,13 @@ $id_TimePeriod = "date1-date2";
                         <?php echo $solution; ?>
                     </p>
                 </div>
-            </div>
         </section>
+        </div>
+        </div>
 
         <?php if (!empty($video_embed)): ?> <!-- Only show video section if a video link is provided -->
         <!-- VIDEO -->
+        <div class="content-block">
         <div class="video-section">
             <iframe
                 src="<?php echo $video_embed; ?>"
@@ -343,16 +315,20 @@ $id_TimePeriod = "date1-date2";
                 allowfullscreen>
             </iframe>
         </div>
+        </div>
         <?php endif; ?>
 
         <!-- QUOTE -->
+        <div class="content-block">
         <blockquote class="quote">
             <p>
                 “<?php echo $quote; ?>”
             </p>
             <p class="author">- <?php echo $quoteAuthor; ?></p>
         </blockquote>
+        </div>
 
+        <div class="content-block">
         <section class="text-section">
 
             <h2 class="custom-highlight"> <b>Result</b></h2>
@@ -360,7 +336,11 @@ $id_TimePeriod = "date1-date2";
             <p> <?php echo $result ?> </p>
             <br>
         </section>
+        </div>
+
+        <div class="content-block">
         <div class="image"><img src="<?php echo $img_7; ?>"></div>
+        </div>
 
 
 
@@ -468,7 +448,7 @@ $id_TimePeriod = "date1-date2";
         </script>
 
 
-    </div>
+        </section>
 
 </body>
 
