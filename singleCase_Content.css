@@ -20,6 +20,10 @@
   border-radius: 5px;
 }
 
+#quote {  
+  padding: 0 0;
+  margin: 100px ;
+}
 .content-block:last-of-type {
   margin-bottom: 0;
 }
@@ -71,6 +75,7 @@
   max-width: 100%;
   left: 0;
   transform: none;
+
 }
 
 .content-block .text-section {
@@ -335,7 +340,7 @@
     text-align: center;
     white-space: normal;
 
-    background-color: #040404; /* #202020 better ??? */
+    background-color: #575757; /* #202020 better ??? */
 
     overflow-wrap: break-word;
     word-break: normal;
@@ -343,7 +348,7 @@
     font-weight: 100;
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
-    color: #ece318;
+    color: #ffffff;
 
     border-left: 5px solid #ece318;
     transition: all 0.3s ease; /* smoother transition when hovering */
@@ -357,6 +362,7 @@
 
 .quote .author {
     font-style: italic;
+    color: #ece318;
 }
 
 /* --- RESPONSIVE --- */
