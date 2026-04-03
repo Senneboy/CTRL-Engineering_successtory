@@ -87,7 +87,7 @@
   width: 100%;
   height: auto;
   display: block;
-  box-shadow: 5px 5px 10px #353535;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
 }
 
 /* --- FLEXBOX TEXT & TEXT --- */
@@ -138,6 +138,7 @@
     height: var(--feature-media-height);
     object-fit: cover;
     border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* --- RESPONSIVE --- */
