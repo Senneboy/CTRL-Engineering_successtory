@@ -3,7 +3,7 @@
 
 //Colors and background images
 $banner_image = "banner.jpg";
-$bg_color = "#040404";
+$bg_color = "#040404"; // #202020 better ???
 $container_color = "#ffffff"; // #fff for dark bg
 
 //Text and titles
