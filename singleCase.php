@@ -52,7 +52,7 @@ $id_TimePeriod = "date1-date2";
 <head>
     <link rel="stylesheet" href="singleCase_Carousel.css">
     <link rel="stylesheet" href="singleCase_IDCard.css">
-    <link rel="stylesheet" href="singleCase_Text.css">
+    <link rel="stylesheet" href="singleCase_Content.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTRL Engineering</title>
