@@ -117,18 +117,18 @@
     padding: 15px 20px;
     width: calc(100% - 5px); /* full width minus right border */
     color: #202020;
-    border: 1px solid #000000;
+
     border-radius: 0;
 }
 
 .id-card .id-content .first {
     background-color: #fff89a;
-    border-top: 2px solid #000000;
+
 }
 
 .id-card .id-content .last {
     background-color: #fffbc1;
-    border-bottom: 2px solid #000000;
+
 }
 
 .id-card .id-content .odd {
