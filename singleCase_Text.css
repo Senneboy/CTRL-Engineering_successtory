@@ -29,6 +29,8 @@
 .text-section p {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+    text-align: justify;
+
 }
 /* --- CUSTOM HIGHLIGHT: HEADER --- */
 .custom-highlight {
@@ -112,6 +114,7 @@
 .col-left p, .col-right p {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
+  text-align: justify;
 }
 
 /* --- VIDEO & BOTTOM IMAGE --- */
