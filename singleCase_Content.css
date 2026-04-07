@@ -63,6 +63,7 @@
 .content-block-row .content-block {
   margin-bottom: 0;
   height: 100%;
+  padding: 60px 40px 40px 60px; /* top, right, bottom, left */
 }
 
 .content-block-row .col-left,
@@ -252,14 +253,12 @@
 
 .col-left {
   flex: 1;
-  padding-right: 40px;
-  border-right: 1px solid #b3b3b3;
+  padding-right: 8px;
 }
 
 .col-right {
   flex: 1;
-  padding-left: 40px;
-  border-left: 1px solid #b3b3b3;
+  padding-left: 8px;
 }
 
 .col-left p, .col-right p {
