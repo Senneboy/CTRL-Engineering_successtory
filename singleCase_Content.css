@@ -57,7 +57,7 @@
 .content-block-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 30px;
   margin-bottom: 56px;
 }
 
@@ -65,6 +65,14 @@
   margin-bottom: 0;
   height: 100%;
   padding: 60px 40px 40px 60px; /* top, right, bottom, left */
+}
+
+.content-block-row > .content-block:first-child {
+  box-shadow: -14px 0 28px -14px rgba(0, 0, 0, 0.22), 0 -14px 28px -14px rgba(0, 0, 0, 0.22), 0 14px 28px -14px rgba(0, 0, 0, 0.22);
+}
+
+.content-block-row > .content-block:last-child {
+  box-shadow: 14px 0 28px -14px rgba(0, 0, 0, 0.22), 0 -14px 28px -14px rgba(0, 0, 0, 0.22), 0 14px 28px -14px rgba(0, 0, 0, 0.22);
 }
 
 .content-block-row .col-left,
@@ -384,7 +392,7 @@
     text-align: center;
     white-space: normal;
 
-    background-color: #616161; /* #202020 better ??? */
+    background-color: #202020; /* #202020 better ??? */
 
     overflow-wrap: break-word;
     word-break: normal;
