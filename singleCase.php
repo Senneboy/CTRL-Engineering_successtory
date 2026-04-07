@@ -281,14 +281,16 @@ $id_TimePeriod = "date1-date2";
                     <h2 class="custom-highlight">
                         The Challenge: 
                     </h2>
-                    <br>
+                    
                     <h3 class="custom-highlight">
                         <?php echo $challenge_title; ?> 
                     </h3>
                     <br>
-                    <p>
-                        <?php echo $challenge; ?>
-                    </p>
+                    <div class="col-text">
+                        <p>
+                            <?php echo $challenge; ?>
+                        </p>
+                    </div>
                 </div>
         </section>
         </div>
@@ -299,14 +301,16 @@ $id_TimePeriod = "date1-date2";
                     <h2 class="custom-highlight">
                         The Solution: 
                     </h2>
-                    <br>
+                    
                     <h3 class="custom-highlight">
                         <?php echo $solution_title; ?> 
                     </h3>
                     <br>
-                    <p>
-                        <?php echo $solution; ?>
-                    </p>
+                    <div class="col-text">
+                        <p>
+                            <?php echo $solution; ?>
+                        </p>
+                    </div>
                 </div>
         </section>
         </div>

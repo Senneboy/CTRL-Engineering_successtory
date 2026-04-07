@@ -73,6 +73,21 @@
   border: none;
 }
 
+.content-block-row h2,
+.content-block-row h3 {
+  margin-left: 35px;
+}
+
+.content-block-row h3 {
+  margin-left: -5px;
+  margin-top: 0;
+}
+
+.content-block-row .col-text {
+  margin: 0 -55px 0 -35px;
+  padding: 0 55px 0 35px;
+}
+
 .content-block .text-section,
 .content-block .video-section,
 .content-block .image,
@@ -227,7 +242,8 @@
 }
 
 .textFlex {
-  flex: 1; 
+  flex: 1;
+  margin-left: -20px;
 }
 
 .imageFlex {
@@ -314,6 +330,10 @@
   .image img {
     width: 100%;
     max-width: 100%;
+  }
+
+  .textFlex {
+    margin-left: 0;
   }
 
   .video-section,
