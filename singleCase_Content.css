@@ -18,6 +18,7 @@
   box-sizing: border-box;
   overflow: visible;
   border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
 }
 
 #quote {  
@@ -60,7 +61,7 @@
   margin-bottom: 56px;
 }
 
-.content-block-row .content-block {
+.content-block-row .content-block { /* for text & text block */
   margin-bottom: 0;
   height: 100%;
   padding: 60px 40px 40px 60px; /* top, right, bottom, left */
@@ -363,7 +364,7 @@
     text-align: center;
     white-space: normal;
 
-    background-color: #575757; /* #202020 better ??? */
+    background-color: #616161; /* #202020 better ??? */
 
     overflow-wrap: break-word;
     word-break: normal;
@@ -381,6 +382,7 @@
 .quote:hover {
     box-shadow: 10px 10px 10px 4px rgba(0, 0, 0, 0.1), 0 -4px 10px rgba(0, 0, 0, 0.1); /* 10px horiz & vert, 5px blur, 3px spread radius  */
     border-left: 10px solid #ece318;
+    font-size: 26px;
 }
 
 .quote .author {
