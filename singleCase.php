@@ -3,8 +3,8 @@
 
 //Colors and background images
 $banner_image = "banner.jpg";
-$bg_color = "#f7f7f7"; // #040404 for black #202020 better ???
-$container_color = "#ececec"; // #fff for dark bg
+$bg_color = "#fff"; // #040404 for black #202020 better ???
+$container_color = "#fff"; // #fff for dark bg
 $hex_stroke_base = 60;
 function hex_stroke($base, $offset) {
     return $base - $offset;
@@ -176,17 +176,17 @@ $id_TimePeriod = "date1-date2";
     </div>
 
     <!-- ID CARD -->
-    <div class="id-card" id="idCard">
+    <!-- <div class="id-card" id="idCard">
 
         <div class="id-content">
-            <h3 class="id-title"><?php echo $id_title ?></h3>
+            <h3 class="id-title"></?php echo $id_title ?></h3>
 
-            <p class="first"><b>CUSTOMER</b> <br> <?php echo $id_customer ?> </p>
-            <p class="even"><b>INDUSTRY</b> <br> <?php echo $id_industry ?> </p>
-            <p class="odd"><b>PRICE RANGE</b> <br> <?php echo $id_priceRange ?> </p>
-            <p class="even"><b>COMPETENCE</b> <br> <?php echo $id_competence ?> </p>
-            <p class="odd"><b>PROJECT TYPE</b> <br> <?php echo $id_projectType ?> </p>
-            <p class="last"><b>TIME PERIOD</b> <br> <?php echo $id_TimePeriod ?> </p>
+            <p class="first"><b>CUSTOMER</b> <br> </?php echo $id_customer ?> </p>
+            <p class="even"><b>INDUSTRY</b> <br> </?php echo $id_industry ?> </p>
+            <p class="odd"><b>PRICE RANGE</b> <br> </?php echo $id_priceRange ?> </p>
+            <p class="even"><b>COMPETENCE</b> <br> </?php echo $id_competence ?> </p>
+            <p class="odd"><b>PROJECT TYPE</b> <br> </?php echo $id_projectType ?> </p>
+            <p class="last"><b>TIME PERIOD</b> <br> </?php echo $id_TimePeriod ?> </p>
 
         </div>
 
@@ -195,7 +195,9 @@ $id_TimePeriod = "date1-date2";
             <span class="arrow-text">ID CARD</span>
         </div>
 
-    </div>
+    </div> -->
+
+
     <!-- CONTENT -->
     <section class="content-stack">
 
@@ -275,7 +277,7 @@ $id_TimePeriod = "date1-date2";
         <section class="text-section">
                 <div class="col-left">
                     <h2 class="custom-highlight">
-                        The Challenge: 
+                        The Challenge 
                     </h2>
                     
                     <h3 class="custom-highlight">
@@ -295,7 +297,7 @@ $id_TimePeriod = "date1-date2";
         <section class="text-section">
                 <div class="col-right">
                     <h2 class="custom-highlight">
-                        The Solution: 
+                        The Solution 
                     </h2>
                     
                     <h3 class="custom-highlight">
