@@ -176,7 +176,6 @@
 @media (max-width: 900px) {
   .content-stack {
     width: calc(100vw - 30px);
-    margin: -500px auto 40px;
   }
 
   .content-block {
