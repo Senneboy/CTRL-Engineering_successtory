@@ -80,12 +80,10 @@ $id_TimePeriod = "date1-date2";
                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-80 -80 1360 1200'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.95' stroke-width='<?php echo hex_stroke($hex_stroke_base, 10); ?>'/%3E%3C/svg%3E"),
                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-80 -80 1360 1200'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.88' stroke-width='<?php echo hex_stroke($hex_stroke_base, 2); ?>'/%3E%3C/svg%3E"),
                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-80 -80 1360 1200'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.9' stroke-width='<?php echo hex_stroke($hex_stroke_base, 1); ?>'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-80 -80 1360 1200'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.8' stroke-width='<?php echo hex_stroke($hex_stroke_base, 4); ?>'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-80 -80 1360 1200'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.86' stroke-width='<?php echo hex_stroke($hex_stroke_base, 2); ?>'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-80 -80 1360 1200'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.84' stroke-width='<?php echo hex_stroke($hex_stroke_base, 3); ?>'/%3E%3C/svg%3E");
-            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-            background-size: 620px 540px, 700px 610px, 560px 490px, 760px 660px, 640px 560px, 660px 580px;
-            background-position: -260px 8%, 108% 26%, -190px 94%, 51% 130%, 106% 102%, -300px 58%;
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-80 -80 1360 1200'%3E%3Cpolygon points='300,1 900,1 1200,520 900,1039 300,1039 0,520' fill='none' stroke='%23ece318' stroke-opacity='0.86' stroke-width='<?php echo hex_stroke($hex_stroke_base, 2); ?>'/%3E%3C/svg%3E");
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            background-size: 1400px 1200px, 1550px 1350px, 1250px 1100px, 1500px 1280px;
+            background-position: -800px 5%, 50vw 35%, -700px 115%, 60vw 80%;
             overflow-x: hidden;
         }
 
