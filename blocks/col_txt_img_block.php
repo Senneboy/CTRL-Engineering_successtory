@@ -133,8 +133,8 @@ $data  = $block['data'] ?? [];
             <?php if ( ! empty( $data['image'] ) ) : ?>
                 <div class="imageFlex">
                     <img
-                        src="<?php echo esc_url( $data['image'] ); ?>"
-                        alt="<?php echo esc_attr( $data['whyitmatters_title'] ?? '' ); ?>"
+                         src="<?php echo esc_url( wp_get_attachment_url( $data['image'] ) ); ?>"
+                        alt="<?php echo esc_attr( \Ctrl\Helpers\Ctrl::image_alt( $data['image'] ) ); ?>"
                     >
                 </div>
             <?php endif; ?>
