@@ -142,44 +142,46 @@ $data  = $block['data'] ?? [];
 
         <!-- Left column -->
         <div class="content-block">
-            <?php if ( ! empty( $data['column_left_title'] ) ) : ?>
+            <?php if ( ! empty( $data['challenge_title'] ) ) : ?>
                 <h2>
-                    <span class="custom-highlight"><?php echo esc_html( $data['column_left_title'] ); ?></span>
+                    <span class="custom-highlight"><?php echo esc_html( $data['challenge_title'] ); ?></span>
                 </h2>
             <?php endif; ?>
 
-            <?php if ( ! empty( $data['column_left_subtitle'] ) ) : ?>
+            <?php if ( ! empty( $data['challenge_subtitle'] ) ) : ?>
+			<br>
                 <h3>
-                    <span class="custom-highlight"><?php echo esc_html( $data['column_left_subtitle'] ); ?></span>
+                    <?php echo esc_html( $data['challenge_subtitle'] ); ?>
                 </h3>
                 <br>
             <?php endif; ?>
 
-            <?php if ( ! empty( $data['column_left_description'] ) ) : ?>
+            <?php if ( ! empty( $data['challenge_description'] ) ) : ?>
                 <div class="col-text">
-                    <p><?php echo wp_kses_post( $data['column_left_description'] ); ?></p>
+                    <p><?php echo wp_kses_post( $data['challenge_description'] ); ?></p>
                 </div>
             <?php endif; ?>
         </div>
 
         <!-- Right column -->
         <div class="content-block">
-            <?php if ( ! empty( $data['column_right_title'] ) ) : ?>
+            <?php if ( ! empty( $data['solution_title'] ) ) : ?>
                 <h2>
-                    <span class="custom-highlight"><?php echo esc_html( $data['column_right_title'] ); ?></span>
+                    <span class="custom-highlight"><?php echo esc_html( $data['solution_title'] ); ?></span>
                 </h2>
             <?php endif; ?>
 
-            <?php if ( ! empty( $data['column_right_subtitle'] ) ) : ?>
+            <?php if ( ! empty( $data['solution_subtitle'] ) ) : ?>
+			<br>
                 <h3>
-                    <span class="custom-highlight"><?php echo esc_html( $data['column_right_subtitle'] ); ?></span>
+                    <?php echo esc_html( $data['solution_subtitle'] ); ?>
                 </h3>
                 <br>
             <?php endif; ?>
 
-            <?php if ( ! empty( $data['column_right_description'] ) ) : ?>
+            <?php if ( ! empty( $data['solution_description'] ) ) : ?>
                 <div class="col-text">
-                    <p><?php echo wp_kses_post( $data['column_right_description'] ); ?></p>
+                    <p><?php echo wp_kses_post( $data['solution_description'] ); ?></p>
                 </div>
             <?php endif; ?>
         </div>
