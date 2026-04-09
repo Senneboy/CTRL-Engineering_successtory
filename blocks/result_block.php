@@ -1,10 +1,10 @@
 <?php
 /**
- * Result Block
+ * Paragraph Block (used for "Result" and "Long story short")
  *
  * ACF Fields:
- *   - title (text) — e.g. "Result"
- *   - content (textarea / wysiwyg)
+ *   - paragraph_title       (text)
+ *   - paragraph_description (textarea / wysiwyg)
  *
  * @var array $args
  */
@@ -13,30 +13,26 @@ $data  = $block['data'] ?? [];
 ?>
 
 <style>
-    .result-block .text-section {
-        font-family: 'Montserrat', sans-serif;
-        width: 150%;
-        position: relative;
-        left: -160px;
-        padding: 0 30px;
+    /* --- Floating card --- */
+    .result-block .content-block {
+        background: #ffffff;
+        padding: 85px 95px;
         box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
     }
 
-    .result-block .text-section > * {
-        width: 100%;
-        margin-left: 0;
-        box-sizing: border-box;
-    }
-
-    .result-block .text-section h2 {
+    /* --- Heading --- */
+    .result-block .content-block h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 28px;
         position: relative;
         display: inline-block;
         padding-left: 48px;
+        margin-top: 0;
     }
 
-    .result-block .text-section h2::before {
+    .result-block .content-block h2::before {
         content: "";
         position: absolute;
         width: 34px;
@@ -55,57 +51,45 @@ $data  = $block['data'] ?? [];
         padding: 0 15px;
     }
 
-    .result-block .text-section p {
+    /* --- Body text --- */
+    .result-block .content-block p {
         font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         text-align: justify;
+        margin-bottom: 0;
     }
 
+    /* --- Responsive --- */
     @media (max-width: 900px) {
-        .result-block .text-section {
-            width: calc(100% - 20px);
-            max-width: calc(100vw - 20px);
-            left: 0;
-            margin-left: auto;
-            margin-right: 0;
-            padding: 0 16px;
+        .result-block .content-block {
+            padding: 44px 24px;
         }
 
-        .result-block .text-section > * {
-            width: 100%;
-            max-width: 100%;
-            margin-left: 0;
-        }
-
-        .result-block .text-section h2 {
+        .result-block .content-block h2 {
             padding-left: 36px;
         }
 
-        .result-block .text-section h2::before {
+        .result-block .content-block h2::before {
             width: 26px;
             height: 22px;
-            left: 0;
         }
     }
 
-    @media (min-width: 1500px) {
-        .result-block .text-section {
-            width: calc(100% + 260px);
-            max-width: calc(100% + 260px);
-            left: -130px;
-            padding: 0 20px;
+    @media (max-width: 600px) {
+        .result-block .content-block {
+            padding: 34px 18px;
         }
     }
 </style>
 
 <section class="result-block">
-    <div class="text-section">
-        <?php if ( ! empty( $data['title'] ) ) : ?>
-            <h2><span class="custom-highlight"><b><?php echo esc_html( $data['title'] ); ?></b></span></h2>
+    <div class="content-block">
+        <?php if ( ! empty( $data['paragraph_title'] ) ) : ?>
+            <h2><span class="custom-highlight"><b><?php echo esc_html( $data['paragraph_title'] ); ?></b></span></h2>
         <?php endif; ?>
 
-        <?php if ( ! empty( $data['content'] ) ) : ?>
-            <p><?php echo wp_kses_post( $data['content'] ); ?></p>
+        <?php if ( ! empty( $data['paragraph_description'] ) ) : ?>
+            <p><?php echo wp_kses_post( $data['paragraph_description'] ); ?></p>
         <?php endif; ?>
     </div>
 </section>

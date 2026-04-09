@@ -1,11 +1,11 @@
 <?php
 /**
- * Column (Text & Image) Block
+ * Column (Text & Image) Block — "Why it matters"
  *
  * ACF Fields:
- *   - title (text)        — heading for this section
- *   - description (textarea / wysiwyg)
- *   - image (image URL)   — ACF return format: Image URL
+ *   - whyitmatters_title       (text)
+ *   - whyitmatters_description (textarea / wysiwyg)
+ *   - image                    (image URL) — ACF return format: Image URL
  *
  * @var array $args
  */
@@ -14,30 +14,26 @@ $data  = $block['data'] ?? [];
 ?>
 
 <style>
-    .col-txt-img-block .text-section {
-        font-family: 'Montserrat', sans-serif;
-        width: 150%;
-        position: relative;
-        left: -160px;
-        padding: 0 30px;
+    /* --- Floating card --- */
+    .col-txt-img-block .content-block {
+        background: #ffffff;
+        padding: 85px 95px;
         box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
     }
 
-    .col-txt-img-block .text-section > * {
-        width: 100%;
-        margin-left: 0;
-        box-sizing: border-box;
-    }
-
-    .col-txt-img-block .text-section h2 {
+    /* --- Heading --- */
+    .col-txt-img-block .content-block h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 28px;
         position: relative;
         display: inline-block;
         padding-left: 48px;
+        margin-top: 0;
     }
 
-    .col-txt-img-block .text-section h2::before {
+    .col-txt-img-block .content-block h2::before {
         content: "";
         position: absolute;
         width: 34px;
@@ -56,13 +52,11 @@ $data  = $block['data'] ?? [];
         padding: 0 15px;
     }
 
+    /* --- Flex layout --- */
     .col-txt-img-block .flex-container-img {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 0;
-        margin: 0;
-        padding: 0;
         margin-top: 16px;
     }
 
@@ -71,7 +65,6 @@ $data  = $block['data'] ?? [];
         font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         text-align: justify;
-        margin-left: 0;
     }
 
     .col-txt-img-block .imageFlex {
@@ -84,77 +77,56 @@ $data  = $block['data'] ?? [];
     }
 
     .col-txt-img-block .imageFlex img {
-        max-width: 100%;
         width: 100%;
         height: auto;
         display: block;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     }
 
+    /* --- Responsive --- */
     @media (max-width: 900px) {
-        .col-txt-img-block .text-section {
-            width: calc(100% - 20px);
-            max-width: calc(100vw - 20px);
-            left: 0;
-            margin-left: auto;
-            margin-right: 0;
-            padding: 0 16px;
+        .col-txt-img-block .content-block {
+            padding: 44px 24px;
         }
 
-        .col-txt-img-block .text-section > * {
-            width: 100%;
-            max-width: 100%;
-            margin-left: 0;
-        }
-
-        .col-txt-img-block .text-section h2 {
+        .col-txt-img-block .content-block h2 {
             padding-left: 36px;
         }
 
-        .col-txt-img-block .text-section h2::before {
+        .col-txt-img-block .content-block h2::before {
             width: 26px;
             height: 22px;
-            left: 0;
         }
 
         .col-txt-img-block .flex-container-img {
             display: block;
-            text-align: left;
-            width: 100%;
-            max-width: 100%;
-            margin-left: 0;
-            margin-right: 0;
         }
 
         .col-txt-img-block .textFlex,
         .col-txt-img-block .imageFlex {
             width: 100%;
-            max-width: 100%;
             margin-left: 0;
             margin-right: 0;
         }
     }
 
-    @media (min-width: 1500px) {
-        .col-txt-img-block .text-section {
-            width: calc(100% + 260px);
-            max-width: calc(100% + 260px);
-            left: -130px;
-            padding: 0 20px;
+    @media (max-width: 600px) {
+        .col-txt-img-block .content-block {
+            padding: 34px 18px;
         }
     }
 </style>
 
 <section class="col-txt-img-block">
-    <div class="text-section">
-        <?php if ( ! empty( $data['title'] ) ) : ?>
-            <h2><span class="custom-highlight"><?php echo esc_html( $data['title'] ); ?></span></h2>
+    <div class="content-block">
+        <?php if ( ! empty( $data['whyitmatters_title'] ) ) : ?>
+            <h2><span class="custom-highlight"><?php echo esc_html( $data['whyitmatters_title'] ); ?></span></h2>
         <?php endif; ?>
 
         <div class="flex-container-img">
-            <?php if ( ! empty( $data['description'] ) ) : ?>
+            <?php if ( ! empty( $data['whyitmatters_description'] ) ) : ?>
                 <div class="textFlex">
-                    <p><?php echo wp_kses_post( $data['description'] ); ?></p>
+                    <p><?php echo wp_kses_post( $data['whyitmatters_description'] ); ?></p>
                 </div>
             <?php endif; ?>
 
@@ -162,7 +134,7 @@ $data  = $block['data'] ?? [];
                 <div class="imageFlex">
                     <img
                         src="<?php echo esc_url( $data['image'] ); ?>"
-                        alt="<?php echo esc_attr( $data['title'] ?? '' ); ?>"
+                        alt="<?php echo esc_attr( $data['whyitmatters_title'] ?? '' ); ?>"
                     >
                 </div>
             <?php endif; ?>

@@ -13,62 +13,42 @@ $data  = $block['data'] ?? [];
 ?>
 
 <style>
-    .lone-image-block .image-figure {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 150%;
-        max-width: 150%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
+    /* --- Floating card (no padding — image fills edge to edge) --- */
+    .lone-image-block .content-block {
+        background: #ffffff;
         padding: 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+        overflow: hidden;
     }
 
-    .lone-image-block .image-figure img {
+    .lone-image-block .content-block img {
         display: block;
         width: 100%;
-        max-width: 100%;
         height: 420px;
         object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     }
 
-    .lone-image-block .image-figure figcaption {
+    .lone-image-block .content-block figcaption {
         font-family: 'Montserrat', sans-serif;
         font-size: 14px;
         color: #555;
         text-align: center;
-        margin-top: 8px;
+        padding: 8px 16px 16px;
     }
 
+    /* --- Responsive --- */
     @media (max-width: 900px) {
-        .lone-image-block .image-figure {
-            width: 100%;
-            max-width: 100%;
-            left: 0;
-            transform: none;
-            margin: 0 auto;
-        }
-
-        .lone-image-block .image-figure img {
+        .lone-image-block .content-block img {
             height: min(52vw, 420px);
-        }
-    }
-
-    @media (min-width: 1500px) {
-        .lone-image-block .image-figure {
-            width: calc(100% + 260px);
-            max-width: calc(100% + 260px);
         }
     }
 </style>
 
 <div class="lone-image-block">
     <?php if ( ! empty( $data['image'] ) ) : ?>
-        <figure class="image-figure">
+        <figure class="content-block">
             <img
                 src="<?php echo esc_url( $data['image'] ); ?>"
                 alt="<?php echo ! empty( $data['caption'] ) ? esc_attr( $data['caption'] ) : ''; ?>"
